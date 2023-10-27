@@ -3,11 +3,11 @@ import { useState } from 'react'
 import Chat from './components/Chat'
 import Title from './components/Title'
 
-import './styles.css'
+import './App.css'
 
 let id = 6
 
-const intialMessages = [
+const initialMessages = [
   { id: 1, text: 'Hello!', user: 'Nicolas' },
   { id: 2, text: 'Hey!', user: 'Sergio' },
   { id: 3, text: 'How are you feeling today?', user: 'Nicolas' },
@@ -16,7 +16,7 @@ const intialMessages = [
 ]
 
 export default function App() {
-  const [messages, setMessages] = useState(intialMessages)
+  const [messages, setMessages] = useState(initialMessages)
   const [user, setUser] = useState('Nicolas')
 
   const addMessage = text => {
