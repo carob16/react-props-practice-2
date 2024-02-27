@@ -17,7 +17,6 @@ const initialMessages = [
 
 export default function App() {
   const [messages, setMessages] = useState(initialMessages)
-  const [user, setUser] = useState('Nicolas')
 
   const addMessage = text => {
     setMessages([...messages, { id: id++, text, user: 'Nicolas' }])
@@ -25,7 +24,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <Title user={user} />
+      <Title/>
       <Chat messages={messages} addMessage={addMessage} />
     </div>
   )
